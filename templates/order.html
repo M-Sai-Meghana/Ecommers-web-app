@@ -1,0 +1,40 @@
+{% extends 'homepage.html' %}
+{% block head %}
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='order.css')}}">
+{% endblock %}
+
+
+{% block element %}
+<div class="bgcolor3 pt-5 pt-6">
+  <div class="container mt-5 ">
+      <div class="row">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Order ID</th>
+              <th>Item ID</th>
+              <th>Item Name</th>
+              <th>Quantity</th>
+              <th>Total Price</th>
+              <th>Mobile</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for o in order %}
+              <div class="col-12 col-md-6 col-lg-4 mb-4">
+                <tr>
+                  <td>{{ o[0] }}</td>
+                  <td>{{ o[1] }}</td>
+                  <td>{{ o[2] }}</td>
+                  <td>{{ o[3] }}</td>
+                  <td>{{ o[4] }}</td>
+                  <td>{{ o[5] }}</td>
+                </tr>
+              </div>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+{% endblock %}

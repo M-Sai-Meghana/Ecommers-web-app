@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Add Items</title>
+    <link rel="stylesheet" href="{{url_for('static' , filename='additems.css')}}"/>
+    <script src="https://kit.fontawesome.com/6c07c94f28.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+</head>
+<body>
+    <div class="add-items-container">
+        <h1 class="addhead"> Adding Items </h1>
+        <table>
+            <tr>
+                <td>
+                    <form  method="POST" enctype="multipart/form-data">
+                        <label>Name:</label>
+                        <input type="text" id="name" name="name"><br>
+                        <label>Description</label>
+                        <textarea type= "text" name="desc"></textarea>
+                        <label>Quantity:</label>
+                        <input type="number" id="qty" name="qty"><br>
+                        <label>Price:</label>
+                        <input type="number" id="price" name="price"><br>
+                        <label>Category:</label>
+                        <select id="category" name="category">
+                            <option value="Electronic Gadgets">Electronic Gadgets</option>
+                            <option value="Computers & Accessories">Computers & Accessories</option>
+                            <option value="Clothing">Clothing</option>
+                            <option value="Beauty & Toys">Beauty & Toys</option>
+                            <option value="Groceries">Groceries</option>
+                        </select><br>
+                        <label for="image">Image:</label>
+                        <input type="file" id="image" name="image"><br>
+                        <button class="btn btn-primary btn-lg btn-block">Add Item</button>
+                    </form>
+                    
+                </td>
+            </tr>
+        </table>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+</body>
+</html>

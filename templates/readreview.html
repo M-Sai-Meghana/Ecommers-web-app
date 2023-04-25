@@ -1,0 +1,23 @@
+{% extends 'homepage.html' %}
+{% block element %}
+<div class="bgcolor3 pt-5 pt-6">
+    <div class="container mt-5 ">
+        <div class="row">
+            {% block content %}
+            <div class="col-12 col-md-6 col-lg-4 mb-4">
+                <div class="explorecards shadow p-3 ">
+                    <div>
+                        {% for i in reviews %}
+                            
+                                    <label> name:{{i[2]}}</label><br>
+                                    <label>Discription:{{i[3]}}</label><br>          
+                                    <label > rate:{{i[4]}}</label><br>
+                        {% endfor %}   
+                    </div>  
+                </div>
+            </div>        
+            {% endblock %}
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,30 @@
+{% extends 'homepage.html' %}
+<div class="extend">
+    {% block element %}
+    <div class="bgcolor3 pt-5 pt-6">
+        <div class="container mt-5 ">
+            <div class="row">
+                {% for i in items %}
+                    <div class="col-12 col-md-6 col-lg-4 mb-4">
+                        <div class="explorecards shadow p-3 ">
+                            <img src="{{url_for('static',filename=i[0]+'.jpg')}}" class="exploreimage" height="100" width="100"/><br>
+                            <label>Item Name: {{i[1]}}</label><br>
+                            <label>Item Quantity:{{i[2]}}</label><br>
+                            <label>Item price: {{i[4]}}</label><br>
+                            <label>Item Description: {{i[5]}}</label><br>
+                            <label>Category:{{i[6]}}</label><br>
+                            <a class="btn btn-info ml-auto add-button" href="{{url_for('cart',itemid=i[0],name=i[1],price=i[4])}}">Add to Cart</a>
+                            <button class="btn btn-danger">Buy Now</button><br>
+                            {% if session.get('user') %}
+                                <a href="{{url_for('addreview',itemid=i[0])}}">Add Review</a>
+                                <a href="{{url_for('readreview',itemid=i[0])}}">Read Review</a>
+                            {% else %}
+                                <a href="#">REad Review</a>
+                            {% endif %}
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+    {% endblock %}
+</div>
+

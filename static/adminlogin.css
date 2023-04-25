@@ -1,0 +1,38 @@
+body{
+    background-image: url('https://img.freepik.com/free-photo/top-view-colorful-geometric-shapes_23-2148209940.jpg?w=996&t=st=1681557955~exp=1681558555~hmac=86de686705a4edd75a7c4abff148053d398d06b9147e1e22cf80366bc487ef11');
+    background-size: cover;
+    height: 89vh;
+}
+.alogin{
+    margin-top: 6%;
+    margin-left: 35%;
+    background-color: #f2f2f2;
+    padding: 20px;
+    border-radius: 10px;
+    width: 490px;
+}
+.ahead{
+    text-align: center;
+    margin-bottom: 20px;
+}
+.alabel{
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+.alogin input[type="email"],
+.alogin input[type="password"] {
+    width: 75%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 5px;
+  }
+  p{
+    display: inline;
+  }
+  .no-account{
+    display: inline;
+    margin-left: 15%;
+  }
+ 

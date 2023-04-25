@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin SignUp</title>
+    <link rel="stylesheet" href="{{url_for('static' , filename='adminsignup.css')}}"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+</head>
+{% with messages = get_flashed_messages() %}
+  {% if messages %}
+      {% for message in messages %}
+        <center><b>{{ message }}</b></center>
+      {% endfor %}
+  {% endif %}
+{% endwith %}
+<body>
+    <div class="asignup">
+        <h1 class="ahead">Create an Account</h1>
+        <form method="POST" class="admin-form">
+            <label class="alabel">User Name</label>&nbsp;
+            <input type="text" name="name" placeholder="Enter your name" required/><br>            
+            <label class="alabel">Email</label>&nbsp;
+            <input type="email" name="email" placeholder="Enter your email id" required/><br>
+            <label class="alabel">Password</label>&nbsp;
+            <input type="password" name="password" placeholder="Atleast 8 characters" required/><br>
+            <label class="alabel">Passcode</label>&nbsp;
+            <input type="number" name="passcode" placeholder="Enter you 4 digits passcode" required/> <br>
+            <center><button class="btn btn-info btn-lg btn-block" >SignUp</button></center>
+        </form>           
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+</body>
+</html>

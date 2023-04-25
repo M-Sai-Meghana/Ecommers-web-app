@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Login</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='adminlogin.css')}}"/>
+    <script src="https://kit.fontawesome.com/6c07c94f28.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+</head>
+{% with messages = get_flashed_messages() %}
+  {% if messages %}
+    {% for message in messages %}
+      <center><b>{{ message }}</b></center>
+    {% endfor %}
+  {% endif %}
+{% endwith %}
+<body>
+    <div class="alogin">
+        <h1 class="alhead">Account Login</h1>
+        <form method="POST">
+            <label class="alabel">Email</label>&nbsp;&nbsp;
+            <i class="fa-solid fa-envelope"></i>&nbsp;
+            <input type="email" name="email" placeholder="Enter your email id"  required/><br>
+            <label class="alabel">Password</label>&nbsp;&nbsp;
+            <i class="fa-solid fa-lock"></i>&nbsp;
+            <input type="password" name="password" placeholder="Atleast 8 characters" required/><br>
+            <a href="{{url_for('adminforget')}}" target="_blank">Forget password</a><br><br>
+            <button class="btn btn-success btn-lg btn-block" >Login</button><br>
+        </form>           
+        <div class="no-account">
+            <p>Not have an account?</p>&nbsp;<a href="{{url_for('adminsign')}}" target="_blank">create an account</a><br>
+        </div>
+      </div>
+      <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>  
+</body>
+</html>

@@ -1,0 +1,24 @@
+body{
+    background-image: url('https://img.freepik.com/premium-photo/metal-shopping-cart-grey-background-banner_427957-3766.jpg?size=626&ext=jpg&ga=GA1.2.1240492638.1681352949&semt=ais');
+    background-size: cover;
+    height: 89vh;
+}
+.forgot{
+    margin-top: 12%;
+    margin-left: 50%;
+    background-color: #f2f2f2;
+    padding: 20px;
+    border-radius: 10px;
+    width: 490px;
+}
+.fhead{
+    text-align: center;
+    margin-bottom: 20px;
+}
+.forgot input[type="number"]{
+    width: 75%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 5px;
+  }

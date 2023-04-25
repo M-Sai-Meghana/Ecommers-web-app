@@ -1,0 +1,47 @@
+
+    {% extends 'homepage.html' %}
+    {% block head %}
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='dashboard.css')}}">
+{% endblock %}
+      {% block element %}      
+    <div class="bgcolor3 pt-5 pt-6">
+        <div class="container mt-5">
+            <div class="row">
+                {% for i in items %}
+                    <div class="col-12 col-md-6 col-lg-4 mb-4">
+                        <div class="explorecards shadow p-3 h-100">
+                            <form method="POST" action="{{url_for('pay',itemid=i[0],name=i[1],price=i[4])}}">
+
+                            <a href="{{url_for('itemsdetails',itemid=i[0])}}"><img src="{{url_for('static',filename=i[0]+'.jpg')}}" class="exploreimage" height="100" width="100"/></a><br>
+                            <label>Name :{{i[1]}}</label><br>
+                            <label>Description :{{i[5]}}</label><br>
+                            <label>quanity</label><br>
+                            <select class="form-select" aria-label="Default select example" name="qty">
+                                <option selected>1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                            </select>
+                            <label>Price :{{i[4]}}</label><br>
+                            
+                            <a class="btn btn-info mt-2 ml-auto add-button" href="{{url_for('cart',itemid=i[0],name=i[1],price=i[4])}}">Add to Cart</a>
+                            <button class="btn btn-danger mt-2">Buy Now</button>  
+                        </form> 
+                        </div>
+                    </div>
+               
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    <section id="contactus">
+        <center><a href="{{url_for('contactus')}}"><button class="btn btn-primary">Contact US</button></a></center>
+    </section>
+    {% endblock %}
+    

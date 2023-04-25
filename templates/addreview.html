@@ -1,0 +1,33 @@
+{% extends 'homepage.html' %}
+    {% block element %}
+    <div class="addreview pt-5 pt-6">
+        <div class="container mt-5 ">
+            <div class="row justify-content-center">
+                <div class="col-12 col-md-6 col-lg-4 mb-4">
+                    <div class="explorecards shadow p-3 ">
+                        <form method="POST">
+                            <label>Review Title</label>
+                            <input type="text" name="title"/>
+                            <label>Review</label>
+                            <textarea name="review"></textarea><br><br>
+                            <label>Rating</label>
+                            <div class="rating">
+                                <input type="radio" id="star5" name="rating" value="5">
+                                <label for="star5" class="fas fa-star"></label>
+                                <input type="radio" id="star4" name="rating" value="4">
+                                <label for="star4" class="fas fa-star"></label>
+                                <input type="radio" id="star3" name="rating" value="3">
+                                <label for="star3" class="fas fa-star"></label>
+                                <input type="radio" id="star2" name="rating" value="2">
+                                <label for="star2" class="fas fa-star"></label>
+                                <input type="radio" id="star1" name="rating" value="1">
+                                <label for="star1" class="fas fa-star"></label>
+                              </div>
+                            <button>Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endblock %}
