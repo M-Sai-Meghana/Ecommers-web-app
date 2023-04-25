@@ -136,7 +136,7 @@ def additems():
         cursor.execute('insert into items(item_id,item_name,item_description,qty,category,price) values(%s,%s,%s,%s,%s,%s)',[id1,name,description,quantity,category,price])
         mydb.commit()
         print(filename)
-        path=r"C:\Users\mnsva\OneDrive\Desktop\mainproject\static"
+        path=r"\static"
         image.save(os.path.join(path,filename))
         print('success')
     return render_template('additems.html')
